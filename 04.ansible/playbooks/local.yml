@@ -1,0 +1,5 @@
+- hosts: 127.0.0.1
+  user: root
+  tasks:
+    - name: Install redis-server
+      apt: name=redis-server force=yes update_cache=yes

@@ -1,0 +1,28 @@
+{
+    "builders":[{
+        "type": "docker",
+        "image": "ubuntu",
+        "export_path": "ansible-image.tar"
+    }],
+    "provisioners":[
+        {
+            "type": "shell",
+            "inline": [
+                "apt-get -y update",
+                "apt-get install -y python-pip python-dev",
+                "pip install ansible"
+            ]
+        },
+        {
+            "type": "ansible-local",
+            "playbook_file": "playbooks/local.yml"
+        }
+    ],
+    "post-processors": [
+        {
+            "type": "docker-import",
+            "repository": "obulpathi/packer-ansible",
+            "tag": "0.1"
+        }
+    ]
+}
