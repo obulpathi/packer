@@ -1,0 +1,15 @@
+{
+    "builders": [{
+        "type": "docker",
+        "image": "ubuntu:14.04",
+        "export_path": "docker-image.tar"
+    }],
+    "provisioners": [{
+        "type": "shell",
+        "inline": [
+            "sleep 30",
+            "apt-get update",
+            "apt-get install -y redis-server"
+        ]
+    }]
+}
