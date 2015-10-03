@@ -1,6 +1,6 @@
 name             'apache'
-maintainer       'tcnksm'
-maintainer_email 'nsd22843@gmail.com'
+maintainer       'obulpathi'
+maintainer_email 'tmp12345@gmail.com'
 license          'All rights reserved'
 description      'Installs/Configures apache'
 long_description IO.read(File.join(File.dirname(__FILE__), 'README.md'))

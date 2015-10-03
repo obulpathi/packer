@@ -11,14 +11,14 @@
         },
         {
             "type": "chef-solo",
-            "cookbook_paths": ["site-cookbooks"],
+            "cookbook_paths": ["cookbooks"],
             "run_list": ["apache::default"]
         }
     ],
     "post-processors": [
         {
             "type": "docker-import",
-            "repository": "tcnksm/packer-chef",
+            "repository": "obulpathi/packer-chef",
             "tag": "0.1"
         }
     ]
